@@ -1,0 +1,40 @@
+{
+  "name": "tone-notify",
+  "version": "1.0.0",
+  "description": "A piece of software used to analyze and notify of tones found in common public safety transmissions",
+  "type": "module",
+  "exports": "./dist/main.js",
+  "types": "./index.d.ts",
+  "files": [
+    "dist",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint . --ext .ts",
+    "build": "tsc",
+    "compile": "npm run build",
+    "start": "node dist/main.js",
+    "watch": "tsc -w",
+    "prepare": "npm run build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "lramos15",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
+    "eslint": "^9.20.1",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "dependencies": {
+    "@types/fluent-ffmpeg": "^2.1.27",
+    "emittery": "^1.1.0",
+    "fluent-ffmpeg": "^2.1.3"
+  }
+}
